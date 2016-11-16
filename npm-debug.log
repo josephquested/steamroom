@@ -1,0 +1,25 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/josephquested/.nvm/versions/node/v5.12.0/bin/node',
+1 verbose cli   '/Users/josephquested/.nvm/versions/node/v5.12.0/bin/npm',
+1 verbose cli   'link',
+1 verbose cli   'templit' ]
+2 info using npm@3.8.6
+3 info using node@v5.12.0
+4 warn invalid symbolic link templit
+5 verbose link symlinking /Users/josephquested/.nvm/versions/node/v5.12.0/lib/node_modules/templit to /Users/josephquested/Documents/steamroom/node_modules/templit
+6 verbose stack Error: ENOENT: no such file or directory, stat '/Users/josephquested/.nvm/versions/node/v5.12.0/lib/node_modules/templit'
+6 verbose stack     at Error (native)
+7 verbose cwd /Users/josephquested/Documents/steamroom
+8 error Darwin 16.1.0
+9 error argv "/Users/josephquested/.nvm/versions/node/v5.12.0/bin/node" "/Users/josephquested/.nvm/versions/node/v5.12.0/bin/npm" "link" "templit"
+10 error node v5.12.0
+11 error npm  v3.8.6
+12 error path /Users/josephquested/.nvm/versions/node/v5.12.0/lib/node_modules/templit
+13 error code ENOENT
+14 error errno -2
+15 error syscall stat
+16 error enoent ENOENT: no such file or directory, stat '/Users/josephquested/.nvm/versions/node/v5.12.0/lib/node_modules/templit'
+17 error enoent ENOENT: no such file or directory, stat '/Users/josephquested/.nvm/versions/node/v5.12.0/lib/node_modules/templit'
+17 error enoent This is most likely not a problem with npm itself
+17 error enoent and is related to npm not being able to find a file.
+18 verbose exit [ -2, true ]

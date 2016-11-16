@@ -1,0 +1,15 @@
+{
+  "name": "steamroom",
+  "version": "1.0.0",
+  "description": "evaporating communication.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "josephquested",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "templit": "^1.0.1"
+  }
+}
