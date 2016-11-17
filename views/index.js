@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, maximum-scale=1, minimum-scale=1">
-    <link rel="stylesheet" href="index.css">
-    <title>steamroom_</title>
-  </head>
-  <body>
+function render (data) {
+  return `
     <div id="header">
       <h1>steamroom_</h1>
       <h2 class="inline">
@@ -18,8 +11,13 @@
       <hr>
     </div>
     <input placeholder="search rooms">
+    <hr>
     <div id="rooms">
-      <!-- rooms -->
+      <div class="room-thumbnail">
+        <p>test room</p>
+      </div>
     </div>
-  </body>
-</html>
+  `
+}
+
+module.exports = render

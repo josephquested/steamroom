@@ -1,0 +1,21 @@
+h1 {
+  font-size: 5vw;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+h2 {
+  font-size: 3vw;
+}
+
+.inline {
+  display: inline;
+}
+
+.room-thumbnail {
+  border-radius: 25px;
+  border: 2px solid black;
+  padding: 20px;
+  width: 200px;
+  height: 200px;
+}
