@@ -3,6 +3,7 @@ var templit = require('templit')
 var bodyParser = require('body-parser')
 
 var index = require('./routes/index')
+var create = require('./routes/create')
 
 var app = express()
 var PORT = process.env.PORT || 3000
@@ -16,6 +17,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 // GET ROUTES //
 app.use('/', index)
+app.use('/create', create)
 
 app.listen(PORT, () => {
   console.log(`steamroom_${PORT}`)
