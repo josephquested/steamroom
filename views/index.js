@@ -15,11 +15,11 @@ function render (data) {
       </div>
 
       <div class="room-container">
-
       </div>
+
       <div class="room-container">
-
       </div>
+
     </div>
   `
 }
