@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
+    "watch": "watchify src/socket.js -o public/bundle.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "josephquested",
@@ -13,6 +14,10 @@
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "nodemon": "^1.11.0",
-    "templit": "^1.0.1"
+    "shortid": "^2.2.6",
+    "socket.io": "^1.5.1",
+    "socket.io-client": "^1.5.1",
+    "templit": "^1.0.1",
+    "watchify": "^3.7.0"
   }
 }

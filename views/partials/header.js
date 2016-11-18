@@ -9,6 +9,9 @@ function render (data) {
         <p id="room-quantity" class="inline">0</p> rooms
       </h2>
       <hr>
+      <input placeholder="search rooms">
+      <input class="nav" type="button" onclick="location.href='/create'" value="create room"/>
+      <hr>
     </div>
   `
 }
