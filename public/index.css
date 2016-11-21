@@ -1,15 +1,23 @@
-h1 {
-  font-size: 5vw;
-  margin-bottom: 0px;
-  margin-top: 0px;
-}
+/* GENERAL */
 
-h2 {
-  font-size: 3vw;
+* {
+  font-family: 'Montserrat', sans-serif;
 }
 
 .inline {
   display: inline;
+}
+
+/* INDEX PAGE */
+
+.nav {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.room-link {
+  text-decoration: none;
+  color: white;
 }
 
 .room-container {
@@ -22,17 +30,36 @@ h2 {
 
 .room-content {
   position:absolute;
-  height:80%;
-  width:90%;
-  padding: 10% 5%;
+  height:50%;
+  width:50%;
+  padding: 1% 2%;
 }
 
-.nav {
-  margin-left: 15px;
-  margin-right: 15px;
+.room-link-name {
+  margin-bottom: 0px;
 }
+
+.room-link-genre {
+  margin-top: 0px;
+}
+
+/* HEADER */
 
 #header-link {
   text-decoration: none;
+  text-align: center;
+  font-size: 4vw;
   color: black;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+#guest-quantity {
+  margin-top: 0px;
+  font-size: 3vw;
+}
+
+#room-quantity {
+  margin-top: 0px;
+  font-size: 3vw;
 }
