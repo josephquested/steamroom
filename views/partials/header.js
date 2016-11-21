@@ -1,7 +1,7 @@
 function render (data) {
   return `
     <div id="header">
-      <a id="header-link" href="/"><h1>steamroom_</h1></a>
+      <a id="header-link" href="/"><h1 id="header-title">steamroom_</h1></a>
       <h2 class="inline">
         <p id="guest-quantity" class="inline">${io.engine.clientsCount}</p> guests
       </h2>
