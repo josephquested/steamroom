@@ -3,7 +3,6 @@ var createRoom = require('../socket/create-room')
 var getRoom = require('../socket/get-room')
 
 router.get('/', (req, res) => {
-  console.log("get room: ", getRoom(req.query.id));
   res.render('room', getRoom(req.query.id))
 })
 

@@ -3,7 +3,10 @@ module.exports = (connection) => {
   io.rooms = []
 
   io.on('connection', (socket) => {
-    console.log('a user connected')
+    socket.on('join', (roomID) => {
+      socket.join(roomID)
+      io.to(roomID).emit('welcome')
+    })
   })
 
   return io

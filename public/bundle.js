@@ -7272,8 +7272,23 @@ yeast.decode = decode;
 module.exports = yeast;
 
 },{}],48:[function(require,module,exports){
+module.exports = (urlArray) => {
+  var roomID = urlArray[4].split('=')[1]
+  io.emit('join', roomID)
+}
+
+},{}],49:[function(require,module,exports){
 (function (global){
 var io = global.io = require('socket.io-client')()
+var urlArray = window.location.href.split('/')
+
+if (urlArray[3] == "room") {
+  require('./join-room')(urlArray)
+}
+
+io.on('welcome', () => {
+  console.log('i feel so welcome!')
+})
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"socket.io-client":34}]},{},[48]);
+},{"./join-room":48,"socket.io-client":34}]},{},[49]);
