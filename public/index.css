@@ -45,6 +45,16 @@
   font-size: 1.8vw;
 }
 
+/* ROOM PAGE */
+.message {
+  list-style: none;
+}
+
+#message-field {
+  width: 50vw;
+  height: 40px;
+}
+
 /* HEADER */
 
 #header-link {

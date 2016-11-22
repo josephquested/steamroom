@@ -5,7 +5,7 @@ function render (data) {
     ${header()}
     <h2>room_</h2>
     <form action="/room" method="post">
-      <input placeholder="name" name="name">
+      <input autocomplete="off" placeholder="name" name="name">
       <input placeholder="genre (one word)" name="genre">
       <input type="submit" value="create room"/>
     </form>

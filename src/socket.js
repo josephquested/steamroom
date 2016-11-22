@@ -2,9 +2,7 @@ var io = global.io = require('socket.io-client')()
 var urlArray = window.location.href.split('/')
 
 if (urlArray[3] == "room") {
-  require('./join-room')(urlArray)
+  var roomID = urlArray[4].split('=')[1]
+  require('./join-room')(roomID)
+  require('./message-handler')(roomID)
 }
-
-io.on('welcome', () => {
-  console.log('i feel so welcome!')
-})

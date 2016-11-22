@@ -7272,23 +7272,50 @@ yeast.decode = decode;
 module.exports = yeast;
 
 },{}],48:[function(require,module,exports){
-module.exports = (urlArray) => {
-  var roomID = urlArray[4].split('=')[1]
+module.exports = (roomID) => {
   io.emit('join', roomID)
 }
 
 },{}],49:[function(require,module,exports){
+module.exports = (roomID) => {
+  var messageList = document.getElementById('message-list')
+  document.getElementById('message-button').onclick = sendMessage
+
+  io.on('server-message', (message) => {
+    appendMessage(message)
+  })
+
+  function sendMessage (e) {
+    e.preventDefault()
+    var messageField = document.getElementById('message-field')
+    var userField = document.getElementById('user-field')
+    var messageObj = {
+      roomID: roomID,
+      message: messageField.value,
+      user: userField.value
+    }
+    io.emit('message', messageObj)
+    messageField.value = ''
+  }
+
+  function appendMessage (data) {
+    var li = document.createElement('li')
+    li.appendChild(document.createTextNode(`${data.user}: ${data.message}`))
+    li.classList.add('message')
+    messageList.appendChild(li)
+  }
+}
+
+},{}],50:[function(require,module,exports){
 (function (global){
 var io = global.io = require('socket.io-client')()
 var urlArray = window.location.href.split('/')
 
 if (urlArray[3] == "room") {
-  require('./join-room')(urlArray)
+  var roomID = urlArray[4].split('=')[1]
+  require('./join-room')(roomID)
+  require('./message-handler')(roomID)
 }
 
-io.on('welcome', () => {
-  console.log('i feel so welcome!')
-})
-
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./join-room":48,"socket.io-client":34}]},{},[49]);
+},{"./join-room":48,"./message-handler":49,"socket.io-client":34}]},{},[50]);

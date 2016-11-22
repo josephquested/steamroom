@@ -1,4 +1,3 @@
-module.exports = (urlArray) => {
-  var roomID = urlArray[4].split('=')[1]
+module.exports = (roomID) => {
   io.emit('join', roomID)
 }
