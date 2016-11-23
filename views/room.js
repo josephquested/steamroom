@@ -3,8 +3,9 @@ var header = require('./partials/header')
 function render (data) {
   return `
     ${header()}
-    <h1>${data.name}</h1>
-    <h2>${data.genre}</h2>
+    <h1 id="room-name">${data.name}</h1>
+    <h2 id="room-genre">${data.genre}</h2>
+    <hr>
     <ul id="message-list"></ul>
     <form>
       <input id="user-field" placeholder="name"/>

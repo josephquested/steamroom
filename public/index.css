@@ -51,9 +51,18 @@
 }
 
 #message-field {
-  width: 50vw;
-  height: 40px;
+  width: 60vw;
+  height: 70px;
 }
+
+#room-name {
+  margin-bottom: 0px;
+}
+
+#room-genre {
+  margin-top: 0px;
+}
+
 
 /* HEADER */
 
@@ -65,8 +74,8 @@
 }
 
 #header-title {
-  margin-bottom: 0px;
-  margin-top: 0px;
+  margin-bottom: 8px;
+  margin-top: 12px;
 }
 
 #guest-quantity {

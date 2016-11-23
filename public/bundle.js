@@ -7281,12 +7281,30 @@ module.exports = (roomID) => {
   var messageList = document.getElementById('message-list')
   document.getElementById('message-button').onclick = sendMessage
 
+  // SOCKET //
+
   io.on('server-message', (message) => {
     appendMessage(message)
   })
 
-  function sendMessage (e) {
-    e.preventDefault()
+  // SUBMIT FUNCTIONS //
+
+  var keyLog = {}
+  onkeydown = onkeyup = (e) => {
+    e = e || event
+    keyLog[e.keyCode] = e.type == 'keydown'
+    checkForSubmit()
+  }
+
+  function checkForSubmit () {
+    if (keyLog[13] && !keyLog[16]) {
+      sendMessage()
+    }
+  }
+
+  // MESSAGE FUNCTIONS //
+
+  function sendMessage (messageField) {
     var messageField = document.getElementById('message-field')
     var userField = document.getElementById('user-field')
     var messageObj = {

@@ -1,19 +1,11 @@
 var header = require('./partials/header')
 
-var dummyRooms = [
-  {name: "Dexter Quested Convos", genre: "children"},
-  {name: "Robots", genre: "technology"},
-  {name: "Was Hitler right?", genre: "history"},
-  {name: "Best Cheers Episdoe..", genre: "tv"},
-  {name: "I am homeless", genre: "lifestyle"}
-]
-
 function render (data) {
   return `
     ${header()}
     <div id="rooms">
       ${renderRooms(io.rooms)}
-      ${renderRooms(dummyRooms)}
+      ${dummyRooms()}
     </div>
     <script src="/bundle.js"></script>
   `
@@ -34,6 +26,17 @@ function renderRooms (rooms) {
     `
   })
   return html
+}
+
+var dummyRooms = () => {
+  var dummies = [
+    {name: "Dexter Quested Convos", genre: "children"},
+    {name: "Robots", genre: "technology"},
+    {name: "Was Hitler right?", genre: "history"},
+    {name: "Best Cheers Episdoe..", genre: "tv"},
+    {name: "I am homeless", genre: "lifestyle"}
+  ]
+  if (! process.env.PORT) return renderRooms(dummies)
 }
 
 module.exports = render
