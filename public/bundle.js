@@ -7279,7 +7279,7 @@ module.exports = (roomID) => {
 },{}],49:[function(require,module,exports){
 module.exports = (roomID) => {
   var messageList = document.getElementById('message-list')
-  document.getElementById('message-button').onclick = sendMessage
+  document.getElementById('message-button').onclick = handleClick
 
   // SOCKET //
 
@@ -7300,6 +7300,11 @@ module.exports = (roomID) => {
     if (keyLog[13] && !keyLog[16]) {
       sendMessage()
     }
+  }
+
+  function handleClick (e) {
+    e.preventDefault()
+    sendMessage()
   }
 
   // MESSAGE FUNCTIONS //
