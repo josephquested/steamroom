@@ -39,7 +39,7 @@ var dummyRooms = () => {
   if (!process.env.PORT) {
     return renderRooms(dummies)
   } else {
-    return
+    return '<div></div>'
   }
 }
 
