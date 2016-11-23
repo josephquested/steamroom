@@ -36,7 +36,11 @@ var dummyRooms = () => {
     {name: "Best Cheers Episdoe..", genre: "tv"},
     {name: "I am homeless", genre: "lifestyle"}
   ]
-  if (! process.env.PORT) return renderRooms(dummies)
+  if (!process.env.PORT) {
+    return renderRooms(dummies)
+  } else {
+    return
+  }
 }
 
 module.exports = render
