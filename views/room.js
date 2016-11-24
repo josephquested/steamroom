@@ -7,7 +7,7 @@ function render (data) {
     <h2 id="room-genre">${data.genre}</h2>
     <hr>
     <div id="message-list"></div>
-    <form>
+    <form id="message-form">
       <input id="user-field" placeholder="name"/>
       <br>
       <textarea id="message-field" autocomplete="off"></textarea>

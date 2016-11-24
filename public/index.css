@@ -60,10 +60,14 @@ pre {
 
 .message-text {
   margin-top: 0px;
+  margin-bottom: 0px;
+  font-weight: lighter;
 }
 
 .message-user {
+  margin-top: 0px;
   margin-bottom: 0px;
+  font-weight: bolder;
 }
 
 #message-field {
