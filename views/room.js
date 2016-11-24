@@ -10,7 +10,7 @@ function render (data) {
     <form id="message-form">
       <input id="user-field" placeholder="name"/>
       <br>
-      <textarea id="message-field" autocomplete="off"></textarea>
+      <textarea id="message-field" placeholder="message" autocomplete="off"></textarea>
       <button id="message-button">send</button>
     </form>
     <script src="../bundle.js"></script>

@@ -7317,10 +7317,10 @@ module.exports = (roomID) => {
   }
 
   function appendMessage (data) {
-    var li = document.createElement('div')
-    li.innerHTML = `${data.user}${data.message}`
-    li.classList.add('message')
-    messageList.appendChild(li)
+    var div = document.createElement('div')
+    div.innerHTML = `${data.user}${data.message}`
+    div.classList.add('message')
+    messageList.appendChild(div)
   }
 
   function formatMessage (user, message) {
