@@ -6,7 +6,7 @@ function render (data) {
     <h1 id="room-name">${data.name}</h1>
     <h2 id="room-genre">${data.genre}</h2>
     <hr>
-    <ul id="message-list"></ul>
+    <div id="message-list"></div>
     <form>
       <input id="user-field" placeholder="name"/>
       <br>

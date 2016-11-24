@@ -8,8 +8,6 @@ module.exports = (connection) => {
     })
 
     socket.on('message', (data) => {
-      console.log('got message')
-      console.log(data.message)
       io.to(data.roomID).emit('server-message', data)
     })
   })

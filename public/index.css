@@ -4,6 +4,14 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+pre {
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+
 .inline {
   display: inline;
 }
@@ -48,6 +56,14 @@
 /* ROOM PAGE */
 .message {
   list-style: none;
+}
+
+.message-text {
+  margin-top: 0px;
+}
+
+.message-user {
+  margin-bottom: 0px;
 }
 
 #message-field {
